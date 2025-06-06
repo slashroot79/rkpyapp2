@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+
+# Environment
+venv/
+.env
+
+# Django specific
+db.sqlite3
+staticfiles/
+
+# VS Code, JetBrains, etc
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test/coverage
+htmlcov/
+*.cover
+.coverage
+
+adopipeline.yml
