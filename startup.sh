@@ -1,9 +1,11 @@
 #!/bin/bash
 set -e
 
+export DEBIAN_FRONTEND=noninteractive
+
 echo ">>> Installing GLIBC 2.34 (if needed)"
-apt update -y
-apt install -y build-essential gawk bison
+apt-get update -y
+apt-get install -y make build-essential gawk bison
 wget http://ftp.gnu.org/gnu/libc/glibc-2.34.tar.gz
 tar -xzf glibc-2.34.tar.gz
 mkdir glibc-build
