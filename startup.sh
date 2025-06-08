@@ -2,8 +2,8 @@
 set -e
 
 echo ">>> Installing GLIBC 2.34 (if needed)"
-sudo apt update
-sudo apt install build-essential gawk bison
+apt update
+apt install build-essential gawk bison
 wget http://ftp.gnu.org/gnu/libc/glibc-2.34.tar.gz
 tar -xzf glibc-2.34.tar.gz
 mkdir glibc-build
