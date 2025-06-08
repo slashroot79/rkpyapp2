@@ -10,15 +10,20 @@ wget http://ftp.gnu.org/gnu/libc/glibc-2.34.tar.gz
 tar -xzf glibc-2.34.tar.gz
 mkdir glibc-build
 cd glibc-build
+echo "********************************************** downloaded glibc 2.34"
 
 ../glibc-2.34/configure --prefix=$HOME/glibc-2.34
 make -j$(nproc)
 make install
 
+echo "********************************************** isntalled glibc 2.34"
 cp -r ~/glibc-2.34/lib /home/site/wwwroot
 
 
 export LD_LIBRARY_PATH=/home/site/wwwroot:$LD_LIBRARY_PATH
+
+echo "********************************************** ld lib path"
+echo ${LD_LIBRARY_PATH}
 
 echo "Activating virtualenv"
 source venv/bin/activate
